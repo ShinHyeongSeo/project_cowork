@@ -7,6 +7,10 @@ int m_is_available(){
     for(i=0; i<MAX_MEMBERS; i++){
         if(members[i]==NULL) return 1;
     }
+    #ifdef DEBUG
+	printf("[DEBUG] : The space is available.\n");
+    #endif
+
     return 0;
 }
 
@@ -37,6 +41,10 @@ void m_create(char* name, char* addr, char* phone, char* menu_name, int price, i
     strcpy(p->time, time);
     strcpy(p->pay, pay);
     _count++;
+    #ifdef DEBUG
+	printf("[DEBUG] : The create is complete.\n");
+    #endif
+
 }
 
 T_Record* m_search_by_name(char* n){
@@ -55,6 +63,10 @@ void m_update(T_Record* p, char* addr, char* phone, char* menu_name, int price, 
     p->qty = qty;
     strcpy(p->time, time);
     strcpy(p->pay, pay);
+    #ifdef DEBUG
+	printf("[DEBUG] : The update is complete.\n");
+    #endif
+
 }
 
 void m_delete(T_Record* p){
@@ -67,6 +79,10 @@ void m_delete(T_Record* p){
      free(p);
      members[index] = NULL;
      _count--;
+    #ifdef DEBUG
+	printf("[DEBUG] : The delete is complete.\n");
+    #endif
+
 }
 
 char* m_to_string(T_Record* p){
@@ -95,11 +111,10 @@ void m_get_all(T_Record* a[]){
 }
 
 void m_get_all2(T_Record* a[]){
-    printf("not completed");
-    // int i, c=0;
-    // for(i=0; i<MAX_MEMBERS; i++){
-    //     a[i]=members[i];
-    // }
+    int i =0;
+    for(i=0; i<MAX_MEMBERS; i++){
+        a[i]=members[i];
+    }
 }
 
 char* m_get_name(T_Record* p){
@@ -143,6 +158,10 @@ int m_get_all_by_name(T_Record* a[], char* n){
             c++;
         }
     }
+    #ifdef DEBUG
+	printf("[DEBUG] : Getting pay information is complete.\n");
+    #endif
+
     return c;
 } 
 
@@ -155,6 +174,10 @@ int m_get_all_by_addr(T_Record* a[], char* n){
             c++;
         }
     }
+    #ifdef DEBUG
+	printf("[DEBUG] : Getting addr information is complete.\n");
+    #endif
+
     return c;
 } 
 
@@ -167,6 +190,10 @@ int m_get_all_by_phone(T_Record* a[], char* n){
             c++;
         }
     }
+    #ifdef DEBUG
+	printf("[DEBUG] : Getting phone information is complete.\n");
+    #endif
+
     return c;
 } 
 
@@ -179,6 +206,10 @@ int m_get_all_by_menu_name(T_Record* a[], char* n){
             c++;
         }
     }
+    #ifdef DEBUG
+	printf("[DEBUG] : Getting menu information is complete.\n");
+    #endif
+
     return c;
 } 
 
@@ -194,6 +225,10 @@ void m_init(){
         members[i] = NULL;
     }
     _count = 0;
+    #ifdef DEBUG
+	printf("[DEBUG] : INIT.\n");
+    #endif
+
 
 } 
 

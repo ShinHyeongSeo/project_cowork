@@ -203,7 +203,7 @@ void search_record(){
     T_Record* records[MAX_MEMBERS];
     int size;
     printf("1. name 2. addr 3. phone 4. menu_name\n");
-    printf("Enter a number you want to search\n");
+    printf("Enter a number you want to search >");
     scanf("%d", &num);
     printf("\n");
         switch(num){
