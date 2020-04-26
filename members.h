@@ -40,8 +40,10 @@ int m_get_price(T_Record* p); // 특정 주문자 주문 가격 가져오기
 int m_get_qty(T_Record* p);
 char* m_get_time(T_Record* p);
 char* m_get_pay(T_Record* p);
-int m_get_all_by_name(T_Record* a[], char* n);  // 회원이름에 문자열이 포함된 모든 레코드 포인터의 배열 만들기 
-//int m_get_all_by_city(T_Record* a[], char* n);  // 회원거주도시가 문자열과 일치하는 모든 레코드 포인터의 배열 만들기 
+int m_get_all_by_name(T_Record* a[], char* n);  // 회원이름에 문자열이 포함된 모든 레코드 포인터의 배열 만들기
+int m_get_all_by_addr(T_Record* a[], char* n);
+int m_get_all_by_phone(T_Record* a[], char* n);
+int m_get_all_by_menu_name(T_Record* a[], char* n);
 void m_init(); // 모든 레코드 제거
 char* m_to_string_save(T_Record* p); // 특정 회원 레코드의 내용을 파일저장용 문자열로 가져오기
 int each_result(T_Record* p);

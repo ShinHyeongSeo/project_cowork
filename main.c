@@ -1,12 +1,12 @@
 #include "members.h"
+#include "string.h"
 
 // 애플리케이션용 함수 원형
 void create_record();
 void read_record();
 void list_record();
 void update_record();
-void delete_one_record();
-void delete_multi_record();
+void delete_record();
 void search_record();
 void load_file();
 void save_file();
@@ -18,7 +18,7 @@ int main(){
     m_init();
     int menu;
     while(1){
-        printf("\nMenu : 1.Create 2.Read 3.List 4.Update 5.Delete(one) 6.Delete(multi) 7.Search 8.Load 9.Save 10.Sorting 11.print_income 12.save_statistics 0.Quit > ");
+        printf("\nMenu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > ");
         scanf("%d", &menu);
         printf("\n");
         switch(menu){
@@ -35,30 +35,27 @@ int main(){
                 update_record();
                 break;
             case 5: 
-                delete_one_record();
+                delete_record();
                 break;
             case 6: 
-                delete_multi_record();
-                break;
-            case 7: 
                 search_record();
                 break;
-            case 8: 
+            case 7: 
                 load_file();
                 break;
-            case 9: 
+            case 8: 
                 save_file();
                 break;
-            case 10: 
+            case 9:
                 sorting_record();
                 break;
-            case 11: 
+            case 10: 
                 print_income();
                 break;
-            case 12: 
+            case 11: 
                 save_statistics();
                 break;                
-            case 13: 
+            case 12: 
                 debug_records();
                 break;
             case 0: 
@@ -85,6 +82,7 @@ void create_record(){
     char pay[20]; // 주문자가 원하는 결제 방법  
 
     printf("Enter a new member's info.\n");
+    printf("Please do not use space when entering information.\n");
     printf("Name > ");
     scanf("%s", name);
     // if(m_search_by_name(name)) {
@@ -103,7 +101,7 @@ void create_record(){
     scanf("%d", &qty);
     printf("Time > ");
     scanf("%s", time);
-    printf("Pay > ");
+    printf("Pay(cash or card) > ");
     scanf("%s", pay);
     m_create(name, addr, phone, menu_name, price, qty, time, pay);
 }
@@ -161,30 +159,26 @@ void update_record(){
         printf("Pay > ");
         scanf("%s", pay);
         m_update(p, addr, phone, menu_name, price, qty, time, pay);
+	printf("The update is complete");
     }
     else {
         printf("No such member!\n");
     }
 }
 
-void delete_one_record(){
-    printf("not completed");
-}
+void delete_record(){
+    char name[20];
+    printf("Enter a name > ");
+    scanf("%s", name);
 
-void delete_multi_record(){
-    printf("not completed");
-    // char name[20];
-    // printf("Enter a name > ");
-    // scanf("%s", name);
-
-    // T_Record* p = m_search_by_name(name);
-    // if(p) {
-    //     m_delete(p);
-    //     printf("The record is deleted!\n");
-    // }
-    // else {
-    //     printf("No such member!\n");
-    // }
+    T_Record* p = m_search_by_name(name);
+    if(p) {
+        m_delete(p);
+        printf("The record is deleted!\n");
+    }
+    else {
+        printf("No such member!\n");
+    }
 }
 
 void list_record(){
@@ -200,35 +194,47 @@ void list_record(){
 }
 
 void search_record(){
-    printf("not completed");
-    // //이름 일부문자열로 검색
-    // char name[20];
-    // printf("Enter a name > ");
-    // scanf("%s", name);
+    char name[20];  // 주문자 이름
+    char addr[150]; // 주문자가 주문 시 입력한 주소(배달할 주소)
+    char phone[20]; // 주문자 전화번호
+    char menu_name[20]; // 주문한 메뉴 이름
 
-    // T_Record* records[MAX_MEMBERS];
-    // int size = m_get_all_by_name(records, name);
-    // printf("%d records found.\n", size);
-    // for(int i=0; i<size; i++){
-    //     T_Record* p = records[i];
-    //     printf("%d. %s\n", i+1, m_to_string(p));
-    // }
+    int num;
+    T_Record* records[MAX_MEMBERS];
+    int size;
+    printf("1. name 2. addr 3. phone 4. menu_name\n");
+    printf("Enter a number you want to search\n");
+    scanf("%d", &num);
+    printf("\n");
+        switch(num){
+            case 1: 
+                printf("Enter a name > ");
+                scanf("%s", name);
+                size = m_get_all_by_name(records, name);
+                break;
+            case 2: 
+                printf("Enter a address > ");
+                scanf("%s", addr);
+                size = m_get_all_by_addr(records, addr);
+                break;
+            case 3: 
+                printf("Enter a phone > ");
+                scanf("%s", phone);
+                size = m_get_all_by_phone(records, phone);
+                break;
+            case 4: 
+                printf("Enter a menu_name > ");
+                scanf("%s", menu_name);
+                size = m_get_all_by_menu_name(records, menu_name);
+                break;
+        }
+    printf("%d records found.\n", size);
+    for(int i=0; i<size; i++){
+        T_Record* p = records[i];
+        printf("%d. %s\n", i+1, m_to_string(p));
+    }
 }
-void search_city(){
-    printf("not completed");
-    // // 거주도시로 검색
-    // char name[20];
-    // printf("Enter a city > ");
-    // scanf("%s", name);
 
-    // T_Record* records[MAX_MEMBERS];
-    // int size = m_get_all_by_city(records, name);
-    // printf("%d records found.\n", size);
-    // for(int i=0; i<size; i++){
-    //     T_Record* p = records[i];
-    //     printf("%d. %s\n", i+1, m_to_string(p));
-    // }
-}
 void load_file(){
     // 데이터파일 읽기
     printf("All data will be deleted and new records will be reloaded.\n");
@@ -283,7 +289,28 @@ void save_file(){
 }
 
 void sorting_record(){
-    printf("not completed");
+    printf("All records.\n");
+    int step, i =0;
+    T_Record *p_temp_str[MAX_MEMBERS];
+    int size = m_count();
+    T_Record* records[MAX_MEMBERS];
+    
+    m_get_all(records);
+    
+    for(step = 0; step < size - 1; step ++){
+        for(i =0; i <size - 1 - step; i++){
+            if(strcmp(records[i]->name, records[i+1]->name)>0){
+                p_temp_str[i] = records[i];
+                records[i] = records[i+1];
+                records[i+1] = p_temp_str[i];
+            }
+        }
+    }
+    
+    for(int i=0; i<size; i++){ 
+        T_Record* p = records[i];
+        printf("%d. %s\n", i+1, m_to_string(p));
+    }
 }
 
 void print_income(){
@@ -297,7 +324,7 @@ void print_income(){
         printf("%d \n", each_result(p));
         total = total + each_result(p);
     }
-    printf("Total income.\n%d", total);
+    printf("Total income : %d", total);
 
 }
 
