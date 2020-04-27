@@ -1,0 +1,40 @@
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 1
+
+Enter a new member's info.
+Please do not use space when entering information.
+Name > Jack
+Address > LA
+Phone > 01012341234
+Menu Name > Pizza
+Price > 10000
+Qty > 1
+Time > 10:20
+Pay(cash or card) > cash
+
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 4
+
+Enter a name > Jack
+Enter a updated info.
+Address > Daegu
+Phone > 01023452345
+Menu Name > Chicken
+Price > 20000
+Qty > 1
+Time > 10:30
+Pay > card
+The update is complete
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 2
+
+Enter a name > Jack
+Member info.
+Name : Jack
+Address : Daegu
+Phone : 01023452345
+Menu name : Chicken
+Price : 20000
+Qty : 1
+Time : 10:30
+Pay : card
+
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 0
+
