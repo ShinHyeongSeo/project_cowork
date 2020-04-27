@@ -1,0 +1,124 @@
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 7
+
+All data will be deleted and new records will be reloaded.
+1.Yes 0.No > 1
+50 records are read from file!
+
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 3
+
+All records.
+1. name : LeeCheEun / addr : Busan / phone : 01047576561 / menu : Chicken / price : 14000 / qty : 2 / time : 14:30 / pay : cash
+2. name : LeeJaeGyem / addr : Seoul / phone : 01044046561 / menu : Pizza / price : 15000 / qty : 3 / time : 13:30 / pay : card
+3. name : KwakYeongHye / addr : Pohang / phone : 01066048628 / menu : Juice / price : 3000 / qty : 2 / time : 15:20 / pay : card
+4. name : KimSuYeon / addr : Wonju / phone : 01023445899 / menu : BubbleTea / price : 4000 / qty : 1 / time : 11:10 / pay : cash
+5. name : ParkJeongWon / addr : Daejeon / phone : 01024688992 / menu : Chicken / price : 15000 / qty : 3 / time : 12:10 / pay : cash
+6. name : JinSuMi / addr : Kimhae / phone : 01020093948 / menu : Juice / price : 2500 / qty : 1 / time : 17:20 / pay : card
+7. name : LeeWeonSu / addr : Daejeon / phone : 01058682933 / menu : Pizza / price : 17000 / qty : 2 / time : 14:00 / pay : cash
+8. name : KinChanSu / addr : Ulsan / phone : 01049996361 / menu : Juice / price : 4000 / qty : 2 / time : 11:30 / pay : cash
+9. name : LeeJaeJun / addr : Seoul / phone : 01054041132 / menu : Pizza / price : 15000 / qty : 3 / time : 13:30 / pay : cash
+10. name : KilYeongSu / addr : Pohang / phone : 01062355628 / menu : Juice / price : 3000 / qty : 2 / time : 15:30 / pay : card
+11. name : ChoiSuBin / addr : Masan / phone : 01021234899 / menu : FruitTea / price : 4500 / qty : 1 / time : 11:10 / pay : cash
+12. name : ParkChaeLin / addr : Daegu / phone : 01022345992 / menu : Chicken / price : 15000 / qty : 2 / time : 12:10 / pay : cash
+13. name : SonYuRi / addr : Kimhae / phone : 01020125748 / menu : Juice / price : 2500 / qty : 1 / time : 17:20 / pay : card
+14. name : LeeHeokIn / addr : Daejeon / phone : 01058235633 / menu : Pizza / price : 17000 / qty : 2 / time : 14:00 / pay : card
+15. name : JoHeonJeong / addr : Busan / phone : 01041236551 / menu : Hamburger / price : 4000 / qty : 2 / time : 14:30 / pay : cash
+16. name : LeeWonHeung / addr : Suwon / phone : 01042345661 / menu : Pizza / price : 15000 / qty : 3 / time : 13:30 / pay : card
+17. name : HaYoonSeok / addr : Pohang / phone : 01064678428 / menu : Juice / price : 3000 / qty : 2 / time : 15:20 / pay : cash
+18. name : ImSuJin / addr : Busan / phone : 01023898997 / menu : BubbleTea / price : 4000 / qty : 1 / time : 11:10 / pay : cash
+19. name : KinSungBin / addr : Daejeon / phone : 01022357992 / menu : Chicken / price : 15000 / qty : 3 / time : 12:10 / pay : cash
+20. name : SeoJaeHeon / addr : Kimhae / phone : 01098759408 / menu : Juice / price : 2500 / qty : 1 / time : 14:20 / pay : card
+21. name : LeeHyeon / addr : Daejeon / phone : 010056297439 / menu : Pizza / price : 17000 / qty : 2 / time : 14:00 / pay : cash
+22. name : ParkEunSu / addr : Busan / phone : 01098743251 / menu : Chicken / price : 14000 / qty : 2 / time : 14:30 / pay : cash
+23. name : KimJongEun / addr : Seoul / phone : 01042389056 / menu : Pizza / price : 15000 / qty : 3 / time : 11:30 / pay : card
+24. name : JiSuIn / addr : Gyeongju / phone : 01063190628 / menu : Juice / price : 3000 / qty : 2 / time : 15:20 / pay : card
+25. name : YangYunSik / addr : Busan / phone : 01089064399 / menu : FruitTea / price : 4000 / qty : 1 / time : 11:10 / pay : cash
+26. name : SeoJiEun / addr : Daejeon / phone : 01052237974 / menu : Chicken / price : 15000 / qty : 3 / time : 11:10 / pay : cash
+27. name : HanWooLim / addr : Kimhae / phone : 01037890744 / menu : Juice / price : 2500 / qty : 1 / time : 17:20 / pay : card
+28. name : HaJuYoon / addr : Daejeon / phone : 01012537893 / menu : Pizza / price : 17000 / qty : 2 / time : 14:00 / pay : cash
+29. name : KimKiHoon / addr : Busan / phone : 01048729301 / menu : Chicken / price : 14000 / qty : 2 / time : 14:30 / pay : cash
+30. name : JeongYoSep / addr : Seoul / phone : 01041046281 / menu : Hamburger / price : 15000 / qty : 3 / time : 14:30 / pay : card
+31. name : ParkBoKum / addr : Daegu / phone : 01063959408 / menu : Juice / price : 3000 / qty : 2 / time : 15:20 / pay : card
+32. name : ParkSuJun / addr : Changwon / phone : 01022956529 / menu : BubbleTea / price : 4000 / qty : 1 / time : 11:10 / pay : cash
+33. name : ParkMinYeong / addr : Daejeon / phone : 01072940292 / menu : Chicken / price : 15000 / qty : 3 / time : 12:10 / pay : cash
+34. name : ChoiMinSu / addr : Kimhae / phone : 01020294724 / menu : Juice / price : 2500 / qty : 1 / time : 19:20 / pay : card
+35. name : ParkHaeRi / addr : Daejeon / phone : 01058340693 / menu : Pizza / price : 17000 / qty : 2 / time : 14:00 / pay : cash
+36. name : KangMinKeoung / addr : Incheon / phone : 01047294031 / menu : Chicken / price : 14000 / qty : 2 / time : 14:30 / pay : cash
+37. name : Jenny / addr : Seoul / phone : 01064904241 / menu : Pizza / price : 15000 / qty : 3 / time : 12:30 / pay : card
+38. name : Sera / addr : Mokpo / phone : 01023496063 / menu : Juice / price : 3000 / qty : 2 / time : 15:20 / pay : card
+39. name : Jaden / addr : Busan / phone : 01068392309 / menu : BubbleTea / price : 4000 / qty : 1 / time : 11:10 / pay : cash
+40. name : Celia / addr : Iksan / phone : 01022345902 / menu : Chicken / price : 15000 / qty : 3 / time : 12:10 / pay : cash
+41. name : Esther / addr : Kimhae / phone : 01079993948 / menu : Juice / price : 2500 / qty : 1 / time : 17:20 / pay : card
+42. name : Eliy / addr : Daejeon / phone : 01058124378 / menu : Pizza / price : 17000 / qty : 2 / time : 14:00 / pay : cash
+43. name : Petra / addr : Busan / phone : 01048932134 / menu : Chicken / price : 14000 / qty : 2 / time : 14:30 / pay : cash
+44. name : KangMinSu / addr : Seoul / phone : 01034889056 / menu : Pizza / price : 15000 / qty : 3 / time : 13:30 / pay : card
+45. name : YoonDaSol / addr : Pohang / phone : 01061274848 / menu : Juice / price : 3000 / qty : 2 / time : 15:20 / pay : cash
+46. name : ParkSaRang / addr : Busan / phone : 01079304899 / menu : BubbleTea / price : 4000 / qty : 1 / time : 11:10 / pay : cash
+47. name : LeeJeongHo / addr : Daejeon / phone : 01024235002 / menu : Hamburger / price : 15000 / qty : 3 / time : 12:10 / pay : cash
+48. name : ParkSaeLin / addr : Ulsan / phone : 01022357748 / menu : Juice / price : 2500 / qty : 1 / time : 17:20 / pay : card
+49. name : OJiYean / addr : Daejeon / phone : 01058612033 / menu : Pizza / price : 17000 / qty : 2 / time : 14:00 / pay : cash
+50. name : JeongSiHun / addr : Busan / phone : 01083329089 / menu : Chicken / price : 15000 / qty : 3 / time : 15:20 / pay : cash
+
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 8
+
+All records.
+
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 10
+
+income.
+28000
+45000
+6000
+4000
+45000
+2500
+34000
+8000
+45000
+6000
+4500
+30000
+2500
+34000
+8000
+45000
+6000
+4000
+45000
+2500
+34000
+28000
+45000
+6000
+4000
+45000
+2500
+34000
+28000
+45000
+6000
+4000
+45000
+2500
+34000
+28000
+45000
+6000
+4000
+45000
+2500
+34000
+28000
+45000
+6000
+4000
+45000
+2500
+34000
+45000
+Total income : 1142000
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 11
+
+All income saved.
+
+Menu : 1.Create 2.Read 3.List 4.Update 5.Delete 6.Search 7.Load 8.Save 9.sorting_record(alphabetical order) 10.print_income 11.save_statistics 0.Quit > 0
+
