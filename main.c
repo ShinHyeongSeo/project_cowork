@@ -289,7 +289,7 @@ void save_file(){
 }
 
 void sorting_record(){
-    printf("All records.\n");
+    printf("All records are sorted alphabetically.\n");
     int step, i =0;
     T_Record *p_temp_str[MAX_MEMBERS];
     int size = m_count();
