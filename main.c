@@ -1,3 +1,6 @@
+/*
+**written by LeeCheEun**
+*/
 #include "members.h"
 #include "string.h"
 
