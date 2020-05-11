@@ -1,26 +1,3 @@
-# Title #
-
-This is a sentence.
-
-## Header ##
-
-1. ordered item.
-2. ordered item.
-3. ordered item.
-
-* unordered item.
-	* unordered item.
-		* unordered item.
-
-	Source code
-
-	```C
-	int main()|
-	{
-		printf("Hello world!\n");
-	}
-	```
-
 # <배달 오더 목록 관리 시스템> #
 주문이 들어온 정보를 관리하는 시스템입니다.
 주문자의 이름, 주소, 전화번호, 메뉴 이름, 가격, 개수, 주문 시간, 결제 방법 총 8가지의 정보를 관리합니다.
